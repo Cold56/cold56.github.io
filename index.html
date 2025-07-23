@@ -1,2 +1,796 @@
-<h>test</h1>
-<p>nice to meet you</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourun Zheng</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Hourun Zheng (郑厚润)">
+    <meta name="keywords" content="Hourun Zheng, 郑厚润">
+    <meta name="author" content="Hourun Zheng">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hourun Zheng - 郑厚润 | Personal Portfolio">
+    <meta property="og:description" content="Personal portfolio of Hourun Zheng (郑厚润) showcasing academic achievements and research projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cold56.github.io">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hourun Zheng - 郑厚润 | Personal Portfolio">
+    <meta name="twitter:description" content="Personal portfolio of Hourun Zheng (郑厚润) showcasing academic achievements and research projects.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 350px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 30px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-photo img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .name {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .career {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .major {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .contact-section {
+            margin-bottom: 30px;
+        }
+
+        .contact-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #ecf0f1;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9em;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-item a:hover {
+            color: #3498db;
+            border-bottom-color: #3498db;
+            text-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .section {
+            margin-bottom: 45px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ecf0f1;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .section:hover h2::after {
+            width: 100px;
+        }
+
+        .academic-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 4px solid #2c3e50;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .academic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .academic-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .academic-item:hover::before {
+            left: 100%;
+        }
+
+        .item-header {
+            margin-bottom: 12px;
+        }
+
+        .item-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .academic-item:hover .item-title {
+            color: #3498db;
+        }
+
+        .item-institution {
+            color: #34495e;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .item-date {
+            color: #7f8c8d;
+            font-size: 14px;
+            font-style: italic;
+            background: #ecf0f1;
+            padding: 2px 8px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        .item-description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .item-description ul {
+            margin: 8px 0 0 0;
+            padding-left: 18px;
+        }
+
+        .item-description li {
+            margin-bottom: 6px;
+        }
+
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .research-category h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 6px;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .research-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #bdc3c7;
+            transition: all 0.2s ease;
+        }
+
+        .research-tag:hover {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Enhanced link styles */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        /* Language Toggle Button */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .lang-btn {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+        }
+
+        .lang-btn:active {
+            transform: translateY(0);
+        }
+
+        .lang-text {
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                max-width: none;
+                padding: 0;
+                box-shadow: none;
+            }
+            
+            .sidebar {
+                background: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn">
+            <span class="lang-text">中文</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-photo">
+                <img src="./images/img.jpg" alt="Hourun Zheng" />
+            </div>
+            
+            <div class="name">Hourun Zheng</div>
+            <div class="career">Undergraduate Student in SZU</div>
+            <div class="major">Major in Robotic Engineering</div>
+            
+            <div class="contact-section">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i>📧</i>
+                    <span><a href="mailto:zhenghourun@gmail.com">zhenghourun@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i>🔗</i>
+                    <span><a href="https://github.com/Cold56" target="_blank">GitHub Profile</a></span>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Research Interests</h3>
+                <div style="font-size: 0.9em; line-height: 1.6;">
+                    • Machine Learning<br>
+                    • Robot Control<br>
+                    • Image Processing<br>
+                    • Fault Diagnosis<br>
+                    • Embedded Systems
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="section">
+                <h2></h2>
+                <p></p>
+            </div>
+
+            <div class="section">
+                <h2></h2>
+                <div class="academic-item">
+                    <div class="item-header">
+                        <div class="item-title"></div>
+                        <div class="item-institution"></div>
+                        <div class="item-date"></div>
+                    </div>
+                    <div class="item-description"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2></h2>
+                <div id="honors-container"></div>
+            </div>
+
+            <div class="section">
+                <h2></h2>
+                <div id="projects-container"></div>
+            </div>
+
+            <div class="section">
+                <h2></h2>
+                <div class="research-areas">
+                    <div class="research-category">
+                        <h3></h3>
+                        <div class="research-tags" id="programming-tags"></div>
+                    </div>
+                    <div class="research-category">
+                        <h3></h3>
+                        <div class="research-tags" id="frameworks-tags"></div>
+                    </div>
+                    <div class="research-category">
+                        <h3></h3>
+                        <div class="research-tags" id="specialized-tags"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language data
+        const languageData = {
+            en: {
+                title: "Academic CV - Hourun Zheng",
+                name: "Hourun Zheng",
+                career: "Undergraduate Student in SZU",
+                major: "Major in Robotic Engineering",
+                contactInfo: "Contact Information",
+                researchInterests: "Research Interests",
+                aboutMe: "About Me",
+                aboutMeContent: "I am an undergraduate student majoring in Robotic Engineering at Shenzhen University. My research interests focus on machine learning, robot control, and image processing technologies. I am passionate about developing innovative solutions that bridge the gap between theoretical knowledge and practical applications in robotics and artificial intelligence.",
+                education: "Education",
+                competitionHonors: "Competition Honors & Awards",
+                technicalSkills: "Technical Skills",
+                researchProjects: "Research Projects",
+                programmingLanguages: "Programming Languages",
+                frameworksTools: "Frameworks & Tools",
+                specializedAreas: "Specialized Areas",
+                interests: [
+                    "• Machine Learning",
+                    "• Robot Control",
+                    "• Image Processing",
+                    "• Fault Diagnosis",
+                    "• Embedded Systems"
+                ],
+                langToggle: "中文",
+                educationData: {
+                    title: "Bachelor of Engineering in Robotic Engineering",
+                    institution: "College of Mechatronics and Control Engineering, Shenzhen University",
+                    date: "Sep 2022 - Present",
+                    description: '<p><strong>Research Focus:</strong> Robot control and mechanical structure design fundamentals, artificial intelligence fundamentals, image recognition and processing technology</p><p><strong>Relevant Coursework:</strong> Advanced Mathematics, Linear Algebra, Probability and Statistics, Programming Fundamentals, Data Structures and Algorithms, Control Theory, Machine Learning, Computer Vision</p>'
+                },
+                honors: [
+                    { title: "Blue Bridge Cup National Software and Information Technology Professional Talent Competition - National Third Prize", date: "2025" },
+                    { title: "China Robot and Artificial Intelligence Competition - Provincial Third Prize", date: "2025" },
+                    { title: "China Intelligent Robot Creative Competition - Provincial Third Prize", date: "2025" },
+                    { title: '"Siemens Cup" China Intelligent Manufacturing Challenge - Provincial Grand Prize', date: "2024" },
+                    { title: '"Challenge Cup" College Students\' Extracurricular Academic Science and Technology Works Competition - University Third Prize', date: "2024" },
+                    { title: '"Teddy Cup" Data Analysis Skills Competition - National Third Prize', date: "2022" }
+                ],
+                projects: [
+                    {
+                        title: "Gujixinyun - Edge AI-based Cloud Monitoring Platform for Legacy Production Lines",
+                        institution: "National Innovation and Entrepreneurship Training Program",
+                        date: "2024",
+                        description: '<p><strong>Role:</strong> Team Member</p><p><strong>Project Overview:</strong> This project aims to collect operational data from key machine tool components under different working conditions, utilize cloud servers for data storage and analysis, and combine embedded development boards carrying diagnostic models and large language models to achieve real-time monitoring of machine tool health status, fault warning, and cluster-based intelligent management.</p><ul><li>Learned thermal imaging data analysis methods and completed data acquisition and parsing</li><li>Developed frontend interface for the monitoring system</li><li>Authored comprehensive project research reports</li><li>Successfully completed the project with excellent results</li></ul>'
+                    },
+                    {
+                        title: "Bamianlinglong - Multi-Robot Collaboration × IoT Smart Control × Multi-Sensory Fusion Interactive Desktop AI Robot",
+                        institution: "Provincial Innovation and Entrepreneurship Training Program",
+                        date: "2025",
+                        description: '<p><strong>Role:</strong> Project Leader</p><p><strong>Project Overview:</strong> Developed multiple desktop pet robots capable of multi-robot synchronization and collaborative performances. Each robot features 3D-printed custom design with rotatable pseudo-holographic head, integrating five-dimensional perception (voice/touch/environmental sensing/communication/IoT hub) for multimodal interaction and smart home control support.</p><ul><li>Conducted extensive research on Chinese and English literature</li><li>Completed cloud platform deployment and system architecture</li><li>Implemented voice interaction, communication, and smart home control modules</li><li>Developed touch interaction components and conducted comprehensive module testing</li></ul>'
+                    }
+                ],
+                skills: {
+                    programming: ["Python", "C", "MATLAB", "JavaScript"],
+                    frameworks: ["PyTorch", "OpenCV", "ROS", "Git"],
+                    specialized: ["Machine Learning", "Computer Vision", "Robot Control", "Embedded Systems"]
+                }
+            },
+            zh: {
+                title: "学术简历 - 郑厚润",
+                name: "郑厚润",
+                career: "深圳大学本科生",
+                major: "机器人工程专业",
+                contactInfo: "联系方式",
+                researchInterests: "研究兴趣",
+                aboutMe: "关于我",
+                aboutMeContent: "我是深圳大学机器人工程专业的本科生。我的研究兴趣主要集中在机器学习、机器人控制和图像处理技术方面。我热衷于开发创新解决方案，弥合理论知识与机器人和人工智能实际应用之间的差距。",
+                education: "教育背景",
+                competitionHonors: "竞赛荣誉与奖项",
+                technicalSkills: "技术技能",
+                researchProjects: "研究项目",
+                programmingLanguages: "编程语言",
+                frameworksTools: "框架与工具",
+                specializedAreas: "专业领域",
+                interests: [
+                    "• 机器学习",
+                    "• 机器人控制",
+                    "• 图像处理",
+                    "• 故障诊断",
+                    "• 嵌入式系统"
+                ],
+                langToggle: "English",
+                educationData: {
+                    title: "机器人工程学士学位",
+                    institution: "深圳大学机电与控制工程学院",
+                    date: "2022年9月 - 至今",
+                    description: '<p><strong>研究方向：</strong> 机器人控制及其机械结构设计基础、人工智能基础、图像识别与处理技术</p><p><strong>相关课程：</strong> 高等数学、线性代数、概率论与数理统计、程序设计基础、自动控制原理、机器学习、计算机视觉</p>'
+                },
+                honors: [
+                    { title: "蓝桥杯全国软件和信息技术专业人才大赛 - 国家级三等奖", date: "2025" },
+                    { title: "中国机器人及人工智能大赛 - 省级三等奖", date: "2025" },
+                    { title: "中国智能机器人创意大赛 - 省级三等奖", date: "2025" },
+                    { title: '"西门子杯"中国智能制造挑战赛 - 省级特等奖', date: "2024" },
+                    { title: '"挑战杯"大学生课外学术科技作品竞赛 - 校级三等奖', date: "2024" },
+                    { title: '"泰迪杯"数据分析技能竞赛 - 国家级三等奖', date: "2022" }
+                ],
+                projects: [
+                    {
+                        title: "古机新韵——基于边缘AI的老旧生产线云化监测平台",
+                        institution: "国家级大学生创新创业训练计划",
+                        date: "2024",
+                        description: '<p><strong>角色：</strong> 团队成员</p><p><strong>项目概述：</strong> 本项目旨在通过采集机床关键零部件在不同工况下的运行数据，利用云服务器进行数据存储与分析，并结合承载诊断模型及大语言模型的嵌入式开发板，实现机床健康状态的实时监测、故障预警与集群化智能管理。</p><ul><li>学习热成像数据分析方法，完成数据获取与解析</li><li>开发监测系统前端界面</li><li>撰写综合项目研究报告</li><li>项目成功完成并获得优秀结项</li></ul>'
+                    },
+                    {
+                        title: "八面玲珑——多机协同×物联智控×多感融通交互的桌面AI机器人",
+                        institution: "省级大学生创新创业训练计划",
+                        date: "2025",
+                        description: '<p><strong>角色：</strong> 项目负责人</p><p><strong>项目概述：</strong> 项目研发多台桌面宠物机器人，实现多机同步与协同表演。单机采用3D打印定制，集成可转向伪全息头部，集成五维感知（语音/触控/环境感知/通讯/物联中枢）以实现多模态交互，且支持智能家居控制。</p><ul><li>阅读中英文资料，进行广泛的文献调研</li><li>完成云平台部署和系统架构设计</li><li>实现语音交互、通讯和智能家居控制模块</li><li>开发触控交互组件并进行全面的模块测试</li></ul>'
+                    }
+                ],
+                skills: {
+                    programming: ["Python", "C", "MATLAB", "JavaScript"],
+                    frameworks: ["PyTorch", "OpenCV", "ROS", "Git"],
+                    specialized: ["机器学习", "计算机视觉", "机器人控制", "嵌入式系统"]
+                }
+            }
+        };
+
+        let currentLang = 'en';
+            
+            // Initialize content on page load
+            updateContent();
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            updateContent();
+        }
+
+        function updateContent() {
+            const data = languageData[currentLang];
+            
+            // Update title
+            document.title = data.title;
+            
+            // Update basic info
+            document.querySelector('.name').textContent = data.name;
+            document.querySelector('.career').textContent = data.career;
+            document.querySelector('.major').textContent = data.major;
+            
+            // Update section headers
+            document.querySelector('.contact-section h3').textContent = data.contactInfo;
+            document.querySelectorAll('.contact-section h3')[1].textContent = data.researchInterests;
+            
+            // Update main content sections
+            const sections = document.querySelectorAll('.section h2');
+            sections[0].textContent = data.aboutMe;
+            sections[1].textContent = data.education;
+            sections[2].textContent = data.competitionHonors;
+            sections[3].textContent = data.researchProjects;
+            sections[4].textContent = data.technicalSkills;
+            
+            // Update about me content
+            document.querySelector('.section p').textContent = data.aboutMeContent;
+            
+            // Update research interests
+            const interestsDiv = document.querySelector('.contact-section div[style]');
+            interestsDiv.innerHTML = data.interests.join('<br>');
+            
+            // Update education content
+            const eduItem = document.querySelector('.section:nth-child(2) .academic-item');
+            eduItem.querySelector('.item-title').textContent = data.educationData.title;
+            eduItem.querySelector('.item-institution').textContent = data.educationData.institution;
+            eduItem.querySelector('.item-date').textContent = data.educationData.date;
+            eduItem.querySelector('.item-description').innerHTML = data.educationData.description;
+            
+            // Update honors content
+            const honorsContainer = document.querySelector('#honors-container');
+            honorsContainer.innerHTML = data.honors.map(honor => `
+                <div class="academic-item">
+                    <div class="item-header">
+                        <div class="item-title">${honor.title}</div>
+                        <div class="item-date">${honor.date}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Update projects content
+            const projectsContainer = document.querySelector('#projects-container');
+            projectsContainer.innerHTML = data.projects.map(project => `
+                <div class="academic-item">
+                    <div class="item-header">
+                        <div class="item-title">${project.title}</div>
+                        <div class="item-institution">${project.institution}</div>
+                        <div class="item-date">${project.date}</div>
+                    </div>
+                    <div class="item-description">${project.description}</div>
+                </div>
+            `).join('');
+            
+            // Update technical skills categories
+            const categories = document.querySelectorAll('.research-category h3');
+            categories[0].textContent = data.programmingLanguages;
+            categories[1].textContent = data.frameworksTools;
+            categories[2].textContent = data.specializedAreas;
+            
+            // Update technical skills tags
+            const programmingTags = document.querySelector('#programming-tags');
+            programmingTags.innerHTML = data.skills.programming.map(skill => `<span class="research-tag">${skill}</span>`).join('');
+            
+            const frameworksTags = document.querySelector('#frameworks-tags');
+            frameworksTags.innerHTML = data.skills.frameworks.map(skill => `<span class="research-tag">${skill}</span>`).join('');
+            
+            const specializedTags = document.querySelector('#specialized-tags');
+            specializedTags.innerHTML = data.skills.specialized.map(skill => `<span class="research-tag">${skill}</span>`).join('');
+            
+            // Update language toggle button
+            document.querySelector('.lang-text').textContent = data.langToggle;
+        }
+
+
+
+        // Enhanced interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language toggle event
+            document.getElementById('langToggle').addEventListener('click', toggleLanguage);
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections and academic items
+            document.querySelectorAll('.section, .academic-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
+
+            // Add typing effect to name
+            const nameElement = document.querySelector('.name');
+            const originalText = nameElement.textContent;
+            nameElement.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    nameElement.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            setTimeout(typeWriter, 500);
+
+            // Add hover effects to research tags
+            document.querySelectorAll('.research-tag').forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px) scale(1.05)';
+                });
+                
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
