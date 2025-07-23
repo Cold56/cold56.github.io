@@ -7,6 +7,20 @@
 >
 
 <url>
+ <loc>mailto:zhenghourun@gmail.com</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-07-23</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://github.com/Cold56</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-07-23</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
  <loc>https://cold56.github.io/</loc>
  <priority>0.3</priority>
  <lastmod>2025-07-23</lastmod>
