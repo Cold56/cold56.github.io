@@ -6,14 +6,22 @@
     <title>Hourun Zheng</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.jpg">
-    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+    <link rel="shortcut icon" href="images/favicon.jpg">
+    <link rel="apple-touch-icon" href="images/favicon.jpg">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="./images/img.jpg" as="image" type="image/jpeg">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Hourun Zheng (郑厚润)">
-    <meta name="keywords" content="Hourun Zheng, 郑厚润">
+    <meta name="description" content="Hourun Zheng (郑厚润) - Undergraduate Student in Robotic Engineering at Shenzhen University. Research interests in machine learning, robot control, and image processing.">
+    <meta name="keywords" content="Hourun Zheng, 郑厚润, Robotic Engineering, Machine Learning, Robot Control, Image Processing, Shenzhen University, Academic CV, Portfolio">
     <meta name="author" content="Hourun Zheng">
     <meta name="robots" content="index, follow">
+    <meta name="language" content="en,zh">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Hourun Zheng - 郑厚润 | Personal Portfolio">
@@ -83,6 +91,15 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-photo img.loading {
+            opacity: 0.5;
+        }
+
+        .profile-photo img.loaded {
+            opacity: 1;
         }
 
         .main-content {
@@ -434,7 +451,7 @@
     <div class="container">
         <div class="sidebar">
             <div class="profile-photo">
-                <img src="./images/img.jpg" alt="Hourun Zheng" />
+                <img src="./images/img.jpg" alt="Hourun Zheng" loading="lazy" class="loading" onload="this.classList.remove('loading'); this.classList.add('loaded');" onerror="this.style.display='none';" />
             </div>
             
             <div class="name">Hourun Zheng</div>
@@ -517,7 +534,7 @@
         // Language data
         const languageData = {
             en: {
-                title: "Academic CV - Hourun Zheng",
+                title: "Hourun Zheng",
                 name: "Hourun Zheng",
                 career: "Undergraduate Student in SZU",
                 major: "Major in Robotic Engineering",
@@ -575,7 +592,7 @@
                 }
             },
             zh: {
-                title: "学术简历 - 郑厚润",
+                title: "郑厚润",
                 name: "郑厚润",
                 career: "深圳大学本科生",
                 major: "机器人工程专业",
