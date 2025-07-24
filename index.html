@@ -350,6 +350,31 @@
             width: 100%;
         }
 
+        /* Fixed height honors section with scroll */
+        #honors-container {
+            height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        #honors-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #honors-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        #honors-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+
+        #honors-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
         /* Language Toggle Button */
         .language-toggle {
             position: fixed;
@@ -565,6 +590,7 @@
                 },
                 honors: [
                     { title: "Blue Bridge Cup National Software and Information Technology Professional Talent Competition - National Third Prize", date: "2025" },
+                    { title: "Raicom Robot Developer Competition - Provincial Second Prize", date: "2025" },
                     { title: "China Robot and Artificial Intelligence Competition - Provincial Third Prize", date: "2025" },
                     { title: "China Intelligent Robot Creative Competition - Provincial Third Prize", date: "2025" },
                     { title: '"Siemens Cup" China Intelligent Manufacturing Challenge - Provincial Grand Prize', date: "2024" },
@@ -623,6 +649,7 @@
                 },
                 honors: [
                     { title: "蓝桥杯全国软件和信息技术专业人才大赛 - 国家级三等奖", date: "2025" },
+                    { title: "睿抗机器人开发者大赛 - 省级二等奖", date: "2025" },
                     { title: "中国机器人及人工智能大赛 - 省级三等奖", date: "2025" },
                     { title: "中国智能机器人创意大赛 - 省级三等奖", date: "2025" },
                     { title: '"西门子杯"中国智能制造挑战赛 - 省级特等奖', date: "2024" },
