@@ -1,0 +1,19 @@
+en:
+  - title: "Gujixinyun - Edge AI-based Cloud Monitoring Platform for Legacy Production Lines"
+    institution: "National Innovation and Entrepreneurship Training Program"
+    date: "2024"
+    description: '<p><strong>Role:</strong> Team Member</p><p><strong>Project Overview:</strong> This project aims to collect operational data from key machine tool components under different working conditions, utilize cloud servers for data storage and analysis, and combine embedded development boards carrying diagnostic models and large language models to achieve real-time monitoring of machine tool health status, fault warning, and cluster-based intelligent management.</p><ul><li>Learned thermal imaging data analysis methods and completed data acquisition and parsing</li><li>Developed frontend interface for the monitoring system</li><li>Authored comprehensive project research reports</li><li>Successfully completed the project with excellent results</li></ul>'
+  - title: "Bamianlinglong - Multi-Robot Collaboration × IoT Smart Control × Multi-Sensory Fusion Interactive Desktop AI Robot"
+    institution: "Provincial Innovation and Entrepreneurship Training Program"
+    date: "2025"
+    description: '<p><strong>Role:</strong> Project Leader</p><p><strong>Project Overview:</strong> Developed multiple desktop pet robots capable of multi-robot synchronization and collaborative performances. Each robot features 3D-printed custom design with rotatable pseudo-holographic head, integrating five-dimensional perception (voice/touch/environmental sensing/communication/IoT hub) for multimodal interaction and smart home control support.</p><ul><li>Conducted extensive research on Chinese and English literature</li><li>Completed cloud platform deployment and system architecture</li><li>Implemented voice interaction, communication, and smart home control modules</li><li>Developed touch interaction components and conducted comprehensive module testing</li></ul>'
+
+zh:
+  - title: "古机新韵——基于边缘AI的老旧生产线云化监测平台"
+    institution: "国家级大学生创新创业训练计划"
+    date: "2024"
+    description: '<p><strong>角色：</strong> 团队成员</p><p><strong>项目概述：</strong> 本项目旨在通过采集机床关键零部件在不同工况下的运行数据，利用云服务器进行数据存储与分析，并结合承载诊断模型及大语言模型的嵌入式开发板，实现机床健康状态的实时监测、故障预警与集群化智能管理。</p><ul><li>学习热成像数据分析方法，完成数据获取与解析</li><li>开发监测系统前端界面</li><li>撰写综合项目研究报告</li><li>项目成功完成并获得优秀结项</li></ul>'
+  - title: "八面玲珑——多机协同×物联智控×多感融通交互的桌面AI机器人"
+    institution: "省级大学生创新创业训练计划"
+    date: "2025"
+    description: '<p><strong>角色：</strong> 项目负责人</p><p><strong>项目概述：</strong> 项目研发多台桌面宠物机器人，实现多机同步与协同表演。单机采用3D打印定制，集成可转向伪全息头部，集成五维感知（语音/触控/环境感知/通讯/物联中枢）以实现多模态交互，且支持智能家居控制。</p><ul><li>阅读中英文资料，进行广泛的文献调研</li><li>完成云平台部署和系统架构设计</li><li>实现语音交互、通讯和智能家居控制模块</li><li>开发触控交互组件并进行全面的模块测试</li></ul>'

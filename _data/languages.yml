@@ -1,0 +1,81 @@
+en:
+  site:
+    title: "Hourun Zheng - Personal Portfolio"
+    description: "Personal portfolio of Hourun Zheng showcasing academic achievements and research projects in Robotic Engineering at Shenzhen University."
+    author: "Hourun Zheng"
+  nav:
+    blog: "Blog"
+    about: "About"
+    portfolio: "Portfolio"
+  home:
+    name: "Hourun Zheng"
+    career: "Undergraduate Student in SZU"
+    major: "Major in Robotic Engineering"
+    contact_info: "Contact Information"
+    research_interests: "Research Interests"
+    about_me: "About Me"
+    about_me_content: "I am an undergraduate student majoring in Robotic Engineering at Shenzhen University. My research interests focus on machine learning, robot control, and image processing technologies. I am passionate about developing innovative solutions that bridge the gap between theoretical knowledge and practical applications in robotics and artificial intelligence."
+    education: "Education"
+    competition_honors: "Competition Honors & Awards"
+    technical_skills: "Technical Skills"
+    research_projects: "Research Projects"
+    programming_languages: "Programming Languages"
+    frameworks_tools: "Frameworks & Tools"
+    specialized_areas: "Specialized Areas"
+    interests:
+      - "Machine Learning"
+      - "Robot Control"
+      - "Image Processing"
+      - "Fault Diagnosis"
+      - "Embedded Systems"
+    lang_toggle: "中文"
+    education_data:
+      title: "Bachelor of Engineering in Robotic Engineering"
+      institution: "College of Mechatronics and Control Engineering, Shenzhen University"
+      date: "Sep 2022 - Present"
+      description: "<p><strong>Academic Performance:</strong> GPA 4.0/4.5, Ranked 2nd out of 50 students</p><p><strong>Research Focus:</strong> Robot control and mechanical structure design fundamentals, artificial intelligence fundamentals, image recognition and processing technology</p><p><strong>Relevant Coursework:</strong> Advanced Mathematics, Linear Algebra, Probability and Statistics, Programming Fundamentals, Data Structures and Algorithms, Control Theory, Machine Learning, Computer Vision</p>"
+    skills:
+      programming: ["Python", "C", "MATLAB", "JavaScript"]
+      frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
+      specialized: ["Machine Learning", "Computer Vision", "Robot Control", "Embedded Systems"]
+
+zh:
+  site:
+    title: "郑厚润 - 个人作品集"
+    description: "郑厚润的个人作品集，展示在深圳大学机器人工程专业的学术成就和研究项目。"
+    author: "郑厚润"
+  nav:
+    blog: "博客"
+    about: "关于"
+    portfolio: "作品集"
+  home:
+    name: "郑厚润"
+    career: "深圳大学本科生"
+    major: "机器人工程专业"
+    contact_info: "联系方式"
+    research_interests: "研究兴趣"
+    about_me: "关于我"
+    about_me_content: "我是深圳大学机器人工程专业的本科生。我的研究兴趣主要集中在机器学习、机器人控制和图像处理技术方面。我热衷于开发创新解决方案，弥合理论知识与机器人和人工智能实际应用之间的差距。"
+    education: "教育背景"
+    competition_honors: "竞赛荣誉与奖项"
+    technical_skills: "技术技能"
+    research_projects: "研究项目"
+    programming_languages: "编程语言"
+    frameworks_tools: "框架与工具"
+    specialized_areas: "专业领域"
+    interests:
+      - "机器学习"
+      - "机器人控制"
+      - "图像处理"
+      - "故障诊断"
+      - "嵌入式系统"
+    lang_toggle: "English"
+    education_data:
+      title: "机器人工程学士学位"
+      institution: "深圳大学机电与控制工程学院"
+      date: "2022年9月 - 至今"
+      description: "<p><strong>学术成绩：</strong> GPA 4.0/4.5，专业排名 2/50</p><p><strong>研究方向：</strong> 机器人控制及其机械结构设计基础、人工智能基础、图像识别与处理技术</p><p><strong>相关课程：</strong> 高等数学、线性代数、概率论与数理统计、程序设计基础、自动控制原理、机器学习、计算机视觉</p>"
+    skills:
+      programming: ["Python", "C", "MATLAB", "JavaScript"]
+      frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
+      specialized: ["机器学习", "计算机视觉", "机器人控制", "嵌入式系统"]

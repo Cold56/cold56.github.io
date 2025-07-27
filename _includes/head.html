@@ -1,12 +1,71 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
-  <link rel="stylesheet" href="{{ 'assets/styles.css' | relative_url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="{{ '/images/favicon.jpg' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/images/favicon.jpg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/images/favicon.jpg' | relative_url }}">
+
+  <!-- Preload critical images -->
+  {% if page.image %}
+  <link rel="preload" href="{{ page.image | relative_url }}" as="image" type="image/jpeg">
+  {% endif %}
+
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="en,zh">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% elsif site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#2c3e50">
+
+  <!-- Jekyll SEO Tag -->
   {%- seo -%}
   {%- feed_meta -%}
+
+  <!-- Structured Data (JSON-LD) -->
+  {% if page.layout == 'portfolio' %}
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ page.author | default: site.author.name }}",
+      "alternateName": "郑厚润",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}{{ page.image | default: '/images/img.jpg' }}",
+      "jobTitle": "Undergraduate Student",
+      "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "{{ site.organization.name }}",
+          "alternateName": "深圳大学",
+          "url": "{{ site.organization.url }}"
+      },
+      "studyAt": {
+          "@type": "EducationalOrganization",
+          "name": "{{ site.organization.name }}"
+      },
+      "knowsAbout": ["Robotic Engineering", "机器人工程", "Technology", "Research", "Machine Learning", "Computer Vision"],
+      "email": "{{ site.author.email }}",
+      "sameAs": [
+          "https://github.com/Cold56"
+      ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- PureCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="{{ 'assets/styles.css' | relative_url }}">
 
   {%- include custom-head.html -%}
 </head>
