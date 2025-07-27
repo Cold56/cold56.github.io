@@ -19,10 +19,9 @@
 
     .portfolio-container {
         display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
         background: white;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
         min-height: 100vh;
     }
 
@@ -137,6 +136,13 @@
 
     .portfolio-section {
         margin-bottom: 45px;
+    }
+
+    .portfolio-section p {
+        color: #2c3e50;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 
     .portfolio-section h2 {
@@ -493,70 +499,18 @@
         }
         
         function updateContent(lang) {
-            // Update language data
+            // Use Jekyll data from languages.yml, projects.yml, and honors.yml
             const languages = {
-                en: {
-                    home: {
-                        lang_toggle: "中文",
-                        name: "Hourun Zheng",
-                        career: "Undergraduate Student in SZU",
-                        major: "Major in Robotic Engineering",
-                        contact_info: "Contact Information",
-                        research_interests: "Research Interests",
-                        interests: ["Machine Learning", "Computer Vision", "Robotics", "Artificial Intelligence"],
-                        about_me: "About Me",
-                        about_me_content: "I am an undergraduate student majoring in Robotic Engineering at Shenzhen University. My research focuses on machine learning, robot vision, and intelligent robotics. I am passionate about exploring the intersection of theoretical knowledge and practical applications.",
-                        education: "Education",
-                        education_data: {
-                            title: "Bachelor of Engineering",
-                            institution: "Shenzhen University",
-                            date: "2022 - 2026",
-                            description: "Major in Robotic Engineering with focus on intelligent systems and automation."
-                        },
-                        competition_honors: "Competition Honors",
-                        research_projects: "Research Projects",
-                        technical_skills: "Technical Skills",
-                        programming_languages: "Programming Languages",
-                        frameworks_tools: "Frameworks & Tools",
-                        specialized_areas: "Specialized Areas",
-                        skills: {
-                            programming: ["Python", "C++", "MATLAB", "JavaScript", "Java"],
-                            frameworks: ["TensorFlow", "PyTorch", "OpenCV", "ROS", "Git"],
-                            specialized: ["Machine Learning", "Computer Vision", "Robotics", "Deep Learning"]
-                        }
-                    }
-                },
-                zh: {
-                    home: {
-                        lang_toggle: "English",
-                        name: "郑厚润",
-                        career: "深圳大学本科生",
-                        major: "机器人工程专业",
-                        contact_info: "联系方式",
-                        research_interests: "研究兴趣",
-                        interests: ["机器学习", "计算机视觉", "机器人学", "人工智能"],
-                        about_me: "关于我",
-                        about_me_content: "我是深圳大学机器人工程专业的本科生。我的研究重点是机器学习、机器人视觉和智能机器人。我热衷于探索理论知识与实际应用的结合。",
-                        education: "教育背景",
-                        education_data: {
-                            title: "工学学士",
-                            institution: "深圳大学",
-                            date: "2022 - 2026",
-                            description: "机器人工程专业，专注于智能系统和自动化。"
-                        },
-                        competition_honors: "竞赛荣誉",
-                        research_projects: "研究项目",
-                        technical_skills: "技术技能",
-                        programming_languages: "编程语言",
-                        frameworks_tools: "框架与工具",
-                        specialized_areas: "专业领域",
-                        skills: {
-                            programming: ["Python", "C++", "MATLAB", "JavaScript", "Java"],
-                            frameworks: ["TensorFlow", "PyTorch", "OpenCV", "ROS", "Git"],
-                            specialized: ["机器学习", "计算机视觉", "机器人学", "深度学习"]
-                        }
-                    }
-                }
+                en: {{ site.data.languages.en | jsonify }},
+                zh: {{ site.data.languages.zh | jsonify }}
+            };
+            const projects = {
+                en: {{ site.data.projects.en | jsonify }},
+                zh: {{ site.data.projects.zh | jsonify }}
+            };
+            const honors = {
+                en: {{ site.data.honors.en | jsonify }},
+                zh: {{ site.data.honors.zh | jsonify }}
             };
             
             const t = languages[lang].home;
@@ -606,6 +560,30 @@
             skillContainers[0].innerHTML = t.skills.programming.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
             skillContainers[1].innerHTML = t.skills.frameworks.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
             skillContainers[2].innerHTML = t.skills.specialized.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
+            
+            // Update honors section
+            const honorsContainer = document.querySelector('.portfolio-honors-container');
+            honorsContainer.innerHTML = honors[lang].map(honor => `
+                <div class="portfolio-academic-item">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-title">${honor.title}</div>
+                        <div class="portfolio-item-date">${honor.date}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Update projects section
+             const projectsContainer = document.getElementById('projects-container');
+             projectsContainer.innerHTML = projects[lang].map(project => `
+                 <div class="portfolio-academic-item">
+                     <div class="portfolio-item-header">
+                         <div class="portfolio-item-title">${project.title}</div>
+                         <div class="portfolio-item-institution">${project.institution}</div>
+                         <div class="portfolio-item-date">${project.date}</div>
+                     </div>
+                     <div class="portfolio-item-description">${project.description}</div>
+                 </div>
+             `).join('');
             
             // Re-add hover effects to new tags
             document.querySelectorAll('.portfolio-research-tag').forEach(tag => {
