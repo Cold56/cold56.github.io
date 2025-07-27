@@ -1,6 +1,9 @@
----
-layout: default
----
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
 
 {% assign lang = page.lang | default: 'en' %}
 {% assign t = site.data.languages[lang] %}
@@ -480,19 +483,139 @@ layout: default
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Language toggle functionality
+        let currentLang = '{{ lang }}';
         const langToggle = document.getElementById('langToggle');
         if (langToggle) {
             langToggle.addEventListener('click', function() {
-                const currentLang = '{{ lang }}';
-                const newLang = currentLang === 'en' ? 'zh' : 'en';
-                const currentPath = window.location.pathname;
-                
-                if (currentPath === '/' || currentPath === '/index.html') {
-                    window.location.href = newLang === 'zh' ? '/zh/' : '/';
-                } else {
-                    // Handle other pages if needed
-                    window.location.href = newLang === 'zh' ? '/zh' + currentPath : currentPath.replace('/zh', '');
+                currentLang = currentLang === 'en' ? 'zh' : 'en';
+                updateContent(currentLang);
+            });
+        }
+        
+        function updateContent(lang) {
+            // Update language data
+            const languages = {
+                en: {
+                    home: {
+                        lang_toggle: "中文",
+                        name: "Hourun Zheng",
+                        career: "Undergraduate Student in SZU",
+                        major: "Major in Robotic Engineering",
+                        contact_info: "Contact Information",
+                        research_interests: "Research Interests",
+                        interests: ["Machine Learning", "Computer Vision", "Robotics", "Artificial Intelligence"],
+                        about_me: "About Me",
+                        about_me_content: "I am an undergraduate student majoring in Robotic Engineering at Shenzhen University. My research focuses on machine learning, robot vision, and intelligent robotics. I am passionate about exploring the intersection of theoretical knowledge and practical applications.",
+                        education: "Education",
+                        education_data: {
+                            title: "Bachelor of Engineering",
+                            institution: "Shenzhen University",
+                            date: "2022 - 2026",
+                            description: "Major in Robotic Engineering with focus on intelligent systems and automation."
+                        },
+                        competition_honors: "Competition Honors",
+                        research_projects: "Research Projects",
+                        technical_skills: "Technical Skills",
+                        programming_languages: "Programming Languages",
+                        frameworks_tools: "Frameworks & Tools",
+                        specialized_areas: "Specialized Areas",
+                        skills: {
+                            programming: ["Python", "C++", "MATLAB", "JavaScript", "Java"],
+                            frameworks: ["TensorFlow", "PyTorch", "OpenCV", "ROS", "Git"],
+                            specialized: ["Machine Learning", "Computer Vision", "Robotics", "Deep Learning"]
+                        }
+                    }
+                },
+                zh: {
+                    home: {
+                        lang_toggle: "English",
+                        name: "郑厚润",
+                        career: "深圳大学本科生",
+                        major: "机器人工程专业",
+                        contact_info: "联系方式",
+                        research_interests: "研究兴趣",
+                        interests: ["机器学习", "计算机视觉", "机器人学", "人工智能"],
+                        about_me: "关于我",
+                        about_me_content: "我是深圳大学机器人工程专业的本科生。我的研究重点是机器学习、机器人视觉和智能机器人。我热衷于探索理论知识与实际应用的结合。",
+                        education: "教育背景",
+                        education_data: {
+                            title: "工学学士",
+                            institution: "深圳大学",
+                            date: "2022 - 2026",
+                            description: "机器人工程专业，专注于智能系统和自动化。"
+                        },
+                        competition_honors: "竞赛荣誉",
+                        research_projects: "研究项目",
+                        technical_skills: "技术技能",
+                        programming_languages: "编程语言",
+                        frameworks_tools: "框架与工具",
+                        specialized_areas: "专业领域",
+                        skills: {
+                            programming: ["Python", "C++", "MATLAB", "JavaScript", "Java"],
+                            frameworks: ["TensorFlow", "PyTorch", "OpenCV", "ROS", "Git"],
+                            specialized: ["机器学习", "计算机视觉", "机器人学", "深度学习"]
+                        }
+                    }
                 }
+            };
+            
+            const t = languages[lang].home;
+            
+            // Update language toggle button
+            document.querySelector('.lang-text').textContent = t.lang_toggle;
+            
+            // Update sidebar content
+            document.querySelector('.portfolio-name').textContent = t.name;
+            document.querySelector('.portfolio-career').textContent = t.career;
+            document.querySelector('.portfolio-major').textContent = t.major;
+            
+            // Update contact section
+            document.querySelector('.portfolio-contact-section h3').textContent = t.contact_info;
+            document.querySelectorAll('.portfolio-contact-section')[1].querySelector('h3').textContent = t.research_interests;
+            
+            // Update research interests
+            const interestsDiv = document.querySelectorAll('.portfolio-contact-section')[1].querySelector('div');
+            interestsDiv.innerHTML = t.interests.map(interest => `• ${interest}`).join('<br>');
+            
+            // Update main content sections
+            const sections = document.querySelectorAll('.portfolio-section h2');
+            sections[0].textContent = t.about_me;
+            sections[1].textContent = t.education;
+            sections[2].textContent = t.competition_honors;
+            sections[3].textContent = t.research_projects;
+            sections[4].textContent = t.technical_skills;
+            
+            // Update about me content
+            document.querySelector('.portfolio-section p').textContent = t.about_me_content;
+            
+            // Update education data
+            const eduItem = document.querySelector('.portfolio-academic-item');
+            eduItem.querySelector('.portfolio-item-title').textContent = t.education_data.title;
+            eduItem.querySelector('.portfolio-item-institution').textContent = t.education_data.institution;
+            eduItem.querySelector('.portfolio-item-date').textContent = t.education_data.date;
+            eduItem.querySelector('.portfolio-item-description').textContent = t.education_data.description;
+            
+            // Update skills section
+            const skillCategories = document.querySelectorAll('.portfolio-research-category h3');
+            skillCategories[0].textContent = t.programming_languages;
+            skillCategories[1].textContent = t.frameworks_tools;
+            skillCategories[2].textContent = t.specialized_areas;
+            
+            // Update skill tags
+            const skillContainers = document.querySelectorAll('.portfolio-research-tags');
+            skillContainers[0].innerHTML = t.skills.programming.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
+            skillContainers[1].innerHTML = t.skills.frameworks.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
+            skillContainers[2].innerHTML = t.skills.specialized.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
+            
+            // Re-add hover effects to new tags
+            document.querySelectorAll('.portfolio-research-tag').forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px) scale(1.05)';
+                });
+                
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
             });
         }
 
@@ -544,3 +667,10 @@ layout: default
         });
     });
 </script>
+
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+{%- endif -%}
+
+</body>
+</html>
