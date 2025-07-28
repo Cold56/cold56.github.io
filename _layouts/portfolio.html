@@ -448,7 +448,7 @@
                         <div class="portfolio-item-institution">{{ project.institution }}</div>
                         <div class="portfolio-item-date">{{ project.date }}</div>
                     </div>
-                    <div class="portfolio-item-description">{{ project.description }}</div>
+                    <div class="portfolio-item-description">{{ project.description | markdownify }}</div>
                 </div>
                 {% endfor %}
             </div>
