@@ -33,9 +33,10 @@ en:
       title: "Bachelor of Engineering in Robotic Engineering"
       institution: "College of Mechatronics and Control Engineering, Shenzhen University"
       date: "Sep 2022 - Present"
-      description: "**Academic Performance:** GPA 4.0/4.5, Ranked 2nd out of 50 students
-**Research Focus:** Robot control and mechanical structure design fundamentals, artificial intelligence fundamentals, image recognition and processing technology
-**Relevant Coursework:** Advanced Mathematics, Linear Algebra, Probability and Statistics, Programming Fundamentals, Data Structures and Algorithms, Control Theory, Machine Learning, Computer Vision"
+      description: |
+        **Academic Performance:** GPA 4.0/4.5, Ranked 2nd out of 50 students
+        **Research Focus:** Robot control and mechanical structure design fundamentals, artificial intelligence fundamentals, image recognition and processing technology
+        **Relevant Coursework:** Advanced Mathematics, Linear Algebra, Probability and Statistics, Programming Fundamentals, Data Structures and Algorithms, Control Theory, Machine Learning, Computer Vision
     skills:
       programming: ["Python", "C", "MATLAB", "JavaScript"]
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
@@ -76,9 +77,10 @@ zh:
       title: "机器人工程学士学位"
       institution: "深圳大学机电与控制工程学院"
       date: "2022年9月 - 至今"
-      description: "**学术成绩：** GPA 4.0/4.5，专业排名 2/50
-**研究方向：** 机器人控制及其机械结构设计基础、人工智能基础、图像识别与处理技术
-**相关课程：** 高等数学、线性代数、概率论与数理统计、程序设计基础、自动控制原理、机器学习、计算机视觉"
+      description: |
+        **学术成绩：** GPA 4.0/4.5，专业排名 2/50
+        **研究方向：** 机器人控制及其机械结构设计基础、人工智能基础、图像识别与处理技术
+        **相关课程：** 高等数学、线性代数、概率论与数理统计、程序设计基础、自动控制原理、机器学习、计算机视觉
     skills:
       programming: ["Python", "C", "MATLAB", "JavaScript"]
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
