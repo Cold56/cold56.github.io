@@ -1,12 +1,12 @@
 # Setup
 title: About me - Hourun Zheng（郑厚润）
-description: Shenzhen University
+description: "Hourun Zheng (郑厚润) is a student at Shenzhen University, majoring in Robotic Engineering. His research interests include robotics, computer vision, and artificial intelligence. 郑厚润是深圳大学机器人工程专业的学生，研究兴趣包括机器人技术、计算机视觉和人工智能。"
 url: https://cold56.github.io
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
-keywords: "Hourun Zheng, 郑厚润, zhenghourun, Robotic Engineering, 机器人工程, Shenzhen University, 深圳大学, Cold56"
+keywords: "Hourun Zheng, 郑厚润, zhenghourun, Robotic Engineering, 机器人工程, Shenzhen University, 深圳大学, Cold56, robotics, computer vision, artificial intelligence, 机器人技术, 计算机视觉, 人工智能"
 
 # Gems
 plugins:
@@ -40,6 +40,9 @@ social:
 google_site_verification: "230b3bdf29c90f9c"
 bing_site_verification: "F414AEEB5A6791F26919CEC5B250828C"
 lang: en_US
+locales:
+  - en_US
+  - zh_CN
 
 # Additional SEO settings
 author:
