@@ -409,7 +409,7 @@
     <div class="portfolio-main-content">
         <div class="portfolio-section">
             <h2>{{ t.home.about_me }}</h2>
-            <p>{{ t.home.about_me_content }}</p>
+            <p>{{ t.home.about_me_content | markdownify }}</p>
         </div>
 
         <div class="portfolio-section">
@@ -420,7 +420,7 @@
                     <div class="portfolio-item-institution">{{ t.home.education_data.institution }}</div>
                     <div class="portfolio-item-date">{{ t.home.education_data.date }}</div>
                 </div>
-                <div class="portfolio-item-description">{{ t.home.education_data.description }}</div>
+                <div class="portfolio-item-description">{{ t.home.education_data.description | markdownify }}</div>
             </div>
         </div>
 
