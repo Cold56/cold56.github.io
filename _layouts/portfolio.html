@@ -547,7 +547,7 @@
             eduItem.querySelector('.portfolio-item-title').textContent = t.education_data.title;
             eduItem.querySelector('.portfolio-item-institution').textContent = t.education_data.institution;
             eduItem.querySelector('.portfolio-item-date').textContent = t.education_data.date;
-            eduItem.querySelector('.portfolio-item-description').textContent = t.education_data.description;
+            eduItem.querySelector('.portfolio-item-description').innerHTML = t.education_data.description;
             
             // Update skills section
             const skillCategories = document.querySelectorAll('.portfolio-research-category h3');
