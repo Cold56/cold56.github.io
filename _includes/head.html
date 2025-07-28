@@ -12,24 +12,20 @@
   <link rel="preload" href="{{ page.image | relative_url }}" as="image" type="image/jpeg">
   {% endif %}
 
-  <!-- SEO Meta Tags -->
+  <!-- Custom SEO -->
+  {%- include seo.html -%}
+  
+  <!-- Additional SEO Meta Tags -->
   <meta name="robots" content="index, follow">
   <meta name="language" content="en,zh">
   <meta name="revisit-after" content="7 days">
   <meta name="distribution" content="global">
   <meta name="rating" content="general">
-  
-  {% if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords }}">
-  {% elsif site.keywords %}
-  <meta name="keywords" content="{{ site.keywords }}">
-  {% endif %}
 
   <!-- Theme color -->
   <meta name="theme-color" content="#2c3e50">
 
-  <!-- Jekyll SEO Tag -->
-  {%- seo -%}
+  <!-- Jekyll Feed -->
   {%- feed_meta -%}
 
   <!-- Structured Data (JSON-LD) -->

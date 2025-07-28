@@ -1,11 +1,12 @@
 # Setup
-title: Hourun Zheng
+title: About me - Hourun Zheng（郑厚润）
 description: Personal Portfolio - Robotic Engineering Student at Shenzhen University
 url: https://cold56.github.io
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
+keywords: "Hourun Zheng, 郑厚润, zhenghourun, Robotic Engineering, 机器人工程, Shenzhen University, 深圳大学, Cold56, portfolio, academic, research, machine learning, computer vision, technology"
 
 # Gems
 plugins:
@@ -76,3 +77,5 @@ author:
   name: Hourun Zheng
   url: https://github.com/cold56/
   email: zhenghourun@gmail.com
+  github: "Cold56"
+  linkedin: "Hourun Zheng"

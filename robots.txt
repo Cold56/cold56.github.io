@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cold56.github.io/sitemap.xml
+
+# Disallow crawling of certain directories
+Disallow: /_sass/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_data/
+Disallow: /assets/
+Disallow: /.git/
+Disallow: /.github/
+
+# Allow crawling of important pages
+Allow: /images/
+Allow: /index.html
+Allow: /404.html
