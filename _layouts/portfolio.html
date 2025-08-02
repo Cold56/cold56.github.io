@@ -409,7 +409,7 @@
     <div class="portfolio-main-content">
         <div class="portfolio-section">
             <h2>{{ t.home.about_me }}</h2>
-            <p>{{ t.home.about_me_content | markdownify }}</p>
+            <p class="portfolio-section-about-me-content">{{ t.home.about_me_content | markdownify }}</p>
         </div>
 
         <div class="portfolio-section">
@@ -540,7 +540,7 @@
             sections[4].textContent = t.technical_skills;
             
             // Update about me content
-            document.querySelector('.portfolio-section p').textContent = t.about_me_content;
+            document.querySelector('.portfolio-section-about-me-content').textContent = t.about_me_content;
             
             // Update education data
             const eduItem = document.querySelector('.portfolio-academic-item');
