@@ -33,7 +33,7 @@ en:
       title: "Bachelor of Engineering in Robotic Engineering"
       institution: "College of Mechatronics and Control Engineering, Shenzhen University"
       date: "Sep 2022 - Present"
-      description: "<p><strong>Academic Performance:</strong> GPA 4.0/4.5, Ranked 2nd out of 50 students</p><p><strong>Research Focus:</strong> Robot control and mechanical structure design fundamentals, artificial intelligence fundamentals, image recognition and processing technology</p><p><strong>Relevant Coursework:</strong> Advanced Mathematics, Linear Algebra, Probability and Statistics, Programming Fundamentals, Data Structures and Algorithms, Control Theory, Machine Learning, Computer Vision</p>"
+      description: "<p><strong>Academic Performance:</strong> GPA 4.0/4.5, Rank 2/50</p><p><strong>Research Focus:</strong> Robot control and mechanical structure design fundamentals, artificial intelligence fundamentals, image recognition and processing technology</p><p><strong>Relevant Coursework:</strong> Advanced Mathematics, Linear Algebra, Probability and Statistics, Programming Fundamentals, Data Structures and Algorithms, Control Theory, Machine Learning, Computer Vision</p>"
     skills:
       programming: ["Python", "C", "MATLAB", "JavaScript"]
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
