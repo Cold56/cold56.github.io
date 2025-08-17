@@ -1,6 +1,8 @@
 en:
   - title: "Blue Bridge Cup National Software and Information Technology Professional Talent Competition - National Third Prize"
     date: "2025"
+  - title: "National University IoT Design Competition - Provincial First Prize"
+    date: "2025"
   - title: "Raicom Robot Developer Competition - Provincial Second Prize"
     date: "2025"
   - title: "China Robot and Artificial Intelligence Competition - Provincial Third Prize"
@@ -11,11 +13,21 @@ en:
     date: "2024"
   - title: '"Challenge Cup" College Students Extracurricular Academic Science and Technology Works Competition - University Third Prize'
     date: "2024"
+  - title: 'SZU Scholarship of Star of Learning - Third Prize'
+    date: "2024"
+  - title: 'SZU Scholarship of Star of Double Innovations - Second Prize'
+    date: "2024"
+  - title: 'SZU Scholarship of Star of Public Welfare - Second Prize'
+    date: "2024"
+  - title: 'SZU Scholarship of Star of Learning - Second Prize'
+    date: "2024"
   - title: '"Teddy Cup" Data Analysis Skills Competition - National Third Prize'
     date: "2022"
 
 zh:
   - title: "蓝桥杯全国软件和信息技术专业人才大赛 - 国家级三等奖"
+    date: "2025"
+  - title: "全国大学生物联网设计竞赛 - 省级一等奖"
     date: "2025"
   - title: "睿抗机器人开发者大赛 - 省级二等奖"
     date: "2025"
@@ -26,6 +38,14 @@ zh:
   - title: '"西门子杯"中国智能制造挑战赛 - 省级特等奖'
     date: "2024"
   - title: '"挑战杯"大学生课外学术科技作品竞赛 - 校级三等奖'
+    date: "2024"
+  - title: '深圳大学学习之星 - 三等奖'
+    date: "2024"
+  - title: '深圳大学双创之星 - 二等奖'
+    date: "2024"
+  - title: '深圳大学公益之星 - 二等奖'
+    date: "2024"
+  - title: '深圳大学学习之星 - 二等奖'
     date: "2024"
   - title: '"泰迪杯"数据分析技能竞赛 - 国家级三等奖'
     date: "2022"
