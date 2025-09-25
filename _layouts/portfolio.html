@@ -414,14 +414,16 @@
 
         <div class="portfolio-section">
             <h2>{{ t.home.education }}</h2>
+            {% for edu in t.home.education_data %}
             <div class="portfolio-academic-item">
                 <div class="portfolio-item-header">
-                    <div class="portfolio-item-title">{{ t.home.education_data.title }}</div>
-                    <div class="portfolio-item-institution">{{ t.home.education_data.institution }}</div>
-                    <div class="portfolio-item-date">{{ t.home.education_data.date }}</div>
+                    <div class="portfolio-item-title">{{ edu.title }}</div>
+                    <div class="portfolio-item-institution">{{ edu.institution }}</div>
+                    <div class="portfolio-item-date">{{ edu.date }}</div>
                 </div>
-                <div class="portfolio-item-description">{{ t.home.education_data.description | markdownify }}</div>
+                <div class="portfolio-item-description">{{ edu.description }}</div>
             </div>
+            {% endfor %}
         </div>
 
         <div class="portfolio-section">
@@ -543,11 +545,26 @@
             document.querySelector('.portfolio-section p').innerHTML = t.about_me_content;
             
             // Update education data
-            const eduItem = document.querySelector('.portfolio-academic-item');
-            eduItem.querySelector('.portfolio-item-title').textContent = t.education_data.title;
-            eduItem.querySelector('.portfolio-item-institution').textContent = t.education_data.institution;
-            eduItem.querySelector('.portfolio-item-date').textContent = t.education_data.date;
-            eduItem.querySelector('.portfolio-item-description').innerHTML = t.education_data.description;
+            const educationSection = document.querySelector('.portfolio-section:nth-child(2)');
+            // Clear existing education items except the heading
+            const educationHeading = educationSection.querySelector('h2');
+            educationSection.innerHTML = '';
+            educationSection.appendChild(educationHeading);
+            
+            // Add new education items
+            t.education_data.forEach(edu => {
+                const eduItem = document.createElement('div');
+                eduItem.className = 'portfolio-academic-item';
+                eduItem.innerHTML = `
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-title">${edu.title}</div>
+                        <div class="portfolio-item-institution">${edu.institution}</div>
+                        <div class="portfolio-item-date">${edu.date}</div>
+                    </div>
+                    <div class="portfolio-item-description">${edu.description}</div>
+                `;
+                educationSection.appendChild(eduItem);
+            });
             
             // Update skills section
             const skillCategories = document.querySelectorAll('.portfolio-research-category h3');
