@@ -1,4 +1,6 @@
 en:
+  - title: "Star of SZU (The second-highest university-level honor of SZU, Only 18 students in the entire faculty obtained this honor in one semester) 🥇"
+    date: "2025"
   - title: "Blue Bridge Cup National Software and Information Technology Professional Talent Competition (Embedded track) - National Third Prize 🥉"
     date: "2025"
   - title: "Raicom Robot Developer Competition (Fully-automatic track of DuoBaoQiBing) - National Second Prize 🥈"
@@ -11,36 +13,38 @@ en:
     date: "2025"
   - title: "China Intelligent Robot Creative Competition (Theme 1) - Provincial Third Prize 🥉"
     date: "2025"
-  - title: "Pengcheng Scholarship 🥇"
+  - title: "Pengcheng Scholarship (Social Scholarship, Only 3 students in the entire faculty obtained this honor in one semester) 🥇"
     date: "2025"
-  - title: "SZU Scholarship of Star of Learning - First Prize 🥇"
+  - title: "SZU Scholarship of Star of Learning - First Prize (Awarded for ranking 1st in the entire major in one semester) 🥇"
     date: "2025"
-  - title: "SZU Scholarship of Star of Double Innovations - Second Prize 🥈"
+  - title: "SZU Scholarship of Star of Double Innovations (Awarded for winning a National Second Prize and a Provincial First Prize) - Second Prize x2 🥈"
     date: "2025"
-  - title: "SZU Scholarship of Star of Double Innovations - Third Prize 🥉"
+  - title: "SZU Scholarship of Star of Double Innovations (Awarded for winning the National Third Prize) - Third Prize 🥉"
     date: "2025"
-  - title: "SZU Scholarship of Star of Public Welfare - First Prize 🥇"
+  - title: "SZU Scholarship of Star of Public Welfare (Awarded for exceeding 500 volunteer hours) - First Prize 🥇"
     date: "2025"
   - title: '"Siemens Cup" China Intelligent Manufacturing Challenge (Logical Track) - Provincial Grand Prize 🥇'
     date: "2024"
   - title: '"Challenge Cup" College Students Extracurricular Academic Science and Technology Works Competition - University Third Prize 🥉'
     date: "2024"
-  - title: 'SZU Scholarship of Star of Learning - Third Prize 🥉'
+  - title: 'SZU Scholarship of Star of Learning (Awarded for ranking 4th in the entire major in one semester) - Third Prize 🥉'
     date: "2024"
-  - title: 'SZU Scholarship of Star of Double Innovations - Second Prize 🥈'
+  - title: 'SZU Scholarship of Star of Double Innovations (Awarded for winning the Provincial Grand Prize) - Second Prize 🥈'
     date: "2024"
-  - title: 'SZU Scholarship of Star of Public Welfare - Second Prize 🥈'
+  - title: 'SZU Scholarship of Star of Public Welfare (Awarded for exceeding 200 volunteer hours) - Second Prize 🥈'
     date: "2024"
   - title: 'SZU Excellent Student Union Member 🥇'
     date: "2024"
   - title: '“Zhongwan Cup” Industrial Software Competition (Mechanical Track) - National Third Prize 🥉'
     date: "2023"
-  - title: 'SZU Scholarship of Star of Learning - Second Prize 🥈'
+  - title: 'SZU Scholarship of Star of Learning (Awarded for ranking 3rd in the entire major in one semester) - Second Prize 🥈'
     date: "2023"
   - title: '"Teddy Cup" Data Analysis Skills Competition (Task B) - National Third Prize 🥉'
     date: "2022"
 
 zh:
+  - title: "深圳大学荔园之星（第二高校级荣誉，学年内全院仅18人获得） 🥇"
+    date: "2025"
   - title: "蓝桥杯全国软件和信息技术专业人才大赛（嵌入式赛道） - 国家级三等奖 🥉"
     date: "2025"
   - title: "睿抗机器人开发者大赛（夺宝奇兵全自动赛道） - 国家级二等奖 🥈"
@@ -53,31 +57,31 @@ zh:
     date: "2025"
   - title: "中国智能机器人创意大赛（主题一） - 省级三等奖 🥉"
     date: "2025"
-  - title: "鹏程奖学金 🥇"
+  - title: "鹏程奖学金（社会奖学金，学年内全院仅3人获得） 🥇"
     date: "2025"
-  - title: "深圳大学学习之星 - 一等奖 🥇"
+  - title: "深圳大学学习之星 - 一等奖（学年专业第一） 🥇"
     date: "2025"
-  - title: "深圳大学双创之星 - 二等奖 🥈"
+  - title: "深圳大学双创之星 - 二等奖x2（荣获国二和省一） 🥈"
     date: "2025"
-  - title: "深圳大学双创之星 - 三等奖 🥉"
+  - title: "深圳大学双创之星 - 三等奖（荣获国三） 🥉"
     date: "2025"
-  - title: "深圳大学公益之星 - 一等奖 🥇"
+  - title: "深圳大学公益之星 - 一等奖（学年义工时长500h+） 🥇"
     date: "2025"
   - title: '"西门子杯"中国智能制造挑战赛（逻辑赛道） - 省级特等奖 🥇'
     date: "2024"
   - title: '"挑战杯"大学生课外学术科技作品竞赛 -  校级三等奖 🥉'
     date: "2024"
-  - title: '深圳大学学习之星 - 三等奖 🥉'
+  - title: '深圳大学学习之星 - 三等奖（学年专业第四） 🥉'
     date: "2024"
-  - title: '深圳大学双创之星 - 二等奖 🥈'
+  - title: '深圳大学双创之星 - 二等奖（荣获省特） 🥈'
     date: "2024"
-  - title: '深圳大学公益之星 - 二等奖 🥈'
+  - title: '深圳大学公益之星 - 二等奖（学年义工时长200h+） 🥈'
     date: "2024"
   - title: '深圳大学优秀共青团员 🥇'
     date: "2024"
   - title: '“中望杯”工业软件大赛（机械组） - 国家级三等奖 🥉'
     date: "2023"
-  - title: '深圳大学学习之星 - 二等奖 🥈'
+  - title: '深圳大学学习之星 - 二等奖（学年专业第三） 🥈'
     date: "2023"
   - title: '"泰迪杯"数据分析技能竞赛（B题） - 国家级三等奖 🥉'
     date: "2022"
