@@ -289,6 +289,59 @@
         box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
     }
 
+    .portfolio-social-areas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .portfolio-social-category {
+        background: #fdfdfd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border-left: 4px solid #3498db;
+    }
+
+    .portfolio-social-category h3 {
+        color: #2c3e50;
+        margin-bottom: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        border-bottom: 2px solid #ecf0f1;
+        padding-bottom: 6px;
+    }
+
+    .portfolio-social-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .portfolio-social-tag {
+        background: #ecf0f1;
+        color: #2c3e50;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 13px;
+        font-weight: 500;
+        border: 1px solid #bdc3c7;
+        transition: all 0.2s ease;
+    }
+
+    .portfolio-social-tag:hover {
+        background: #3498db;
+        color: white;
+        border-color: #3498db;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+    }
+
+    /*给基座来点金色震撼，注意clubs和基座的位置不能改动*/
+    .portfolio-social-areas .portfolio-social-category:nth-child(2) .portfolio-social-tag:first-child {
+        color: gold;
+        font-size: 14px;
+    }
     .portfolio-honors-container {
         height: 300px;
         overflow-y: auto;
@@ -485,6 +538,27 @@
                 </div>
             </div>
         </div>
+        <div class="portfolio-section">
+            <h2>{{ t.home.social_activities }}</h2>
+            <div class="portfolio-social-areas">
+                <div class="portfolio-social-category">
+                    <h3>{{ t.home.roles }}</h3>
+                    <div class="portfolio-social-tags">
+                        {% for role in t.home.social_activities_data.role %}
+                        <span class="portfolio-social-tag">{{ role }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="portfolio-social-category">
+                    <h3>{{ t.home.clubs }}</h3>
+                    <div class="portfolio-social-tags"> 
+                        {% for club in t.home.social_activities_data.clubs %}
+                        <span class="portfolio-social-tag">{{ club }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -540,6 +614,7 @@
             sections[2].textContent = t.competition_honors;
             sections[3].textContent = t.research_projects;
             sections[4].textContent = t.technical_skills;
+            sections[5].textContent = t.social_activities;
             
             // Update about me content
             document.querySelector('.portfolio-section p').innerHTML = t.about_me_content;
@@ -578,6 +653,15 @@
             skillContainers[1].innerHTML = t.skills.frameworks.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
             skillContainers[2].innerHTML = t.skills.specialized.map(skill => `<span class="portfolio-research-tag">${skill}</span>`).join('');
             
+            // Update social activities section
+            const socialAcitivitiesCategories = document.querySelectorAll('.portfolio-social-category h3');
+            socialAcitivitiesCategories[0].textContent = t.role;
+            socialAcitivitiesCategories[1].textContent = t.clubs;
+
+            const socialActivitiesContainer = document.querySelectorAll('.portfolio-social-tags');
+            socialActivitiesContainer[0].innerHTML = t.social_activities_data.role.map(role => `<span class="portfolio-social-tag">${role}</span>`).join('');
+            socialActivitiesContainer[1].innerHTML = t.social_activities_data.clubs.map(club => `<span class="portfolio-social-tag">${club}</span>`).join('');
+
             // Update honors section
             const honorsContainer = document.querySelector('.portfolio-honors-container');
             honorsContainer.innerHTML = honors[lang].map(honor => `

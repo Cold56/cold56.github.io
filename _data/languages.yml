@@ -18,7 +18,10 @@ en:
     education: "Education"
     competition_honors: "Honors & Awards (Scrollable)"
     technical_skills: "Technical Skills"
+    social_activities: "Social Activities"
     research_projects: "Research Projects"
+    roles: "Roles"
+    clubs: "Clubs"
     programming_languages: "Programming Languages"
     frameworks_tools: "Frameworks & Tools"
     specialized_areas: "Specialized Areas"
@@ -42,6 +45,9 @@ en:
       programming: ["Python", "C", "MATLAB", "JavaScript"]
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
       specialized: ["Machine Learning", "Computer Vision", "Robot Control", "Embedded Systems"]
+    social_activities_data:
+      role: ["Publicity Commissioner of Class 1, Robotics Engineering of SZU"]
+      clubs: ["Huawei Intelligent Base (Hardware Department)", "AutoLeaders Club" ,"ROS Club"]
 
 zh:
   site:
@@ -63,7 +69,10 @@ zh:
     education: "教育背景"
     competition_honors: "荣誉与奖项（可滑动）"
     technical_skills: "技术技能"
+    social_activities: "社会活动"
     research_projects: "研究项目"
+    roles: "职务"
+    clubs: "俱乐部"
     programming_languages: "编程语言"
     frameworks_tools: "框架与工具"
     specialized_areas: "专业领域"
@@ -87,3 +96,6 @@ zh:
       programming: ["Python", "C", "MATLAB", "JavaScript"]
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
       specialized: ["机器学习", "计算机视觉", "机器人控制", "嵌入式系统"]
+    social_activities_data:
+      role: ["深圳大学机器人工程一班班级宣传委员"]
+      clubs: ["华为智能基座（硬件部）", "AL俱乐部" ,"ROS俱乐部"]
