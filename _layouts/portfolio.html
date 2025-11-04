@@ -252,7 +252,7 @@
     .portfolio-research-areas {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+        gap: 10px;
     }
 
     .portfolio-research-category h3 {
@@ -298,7 +298,7 @@
     .portfolio-social-category {
         background: #fdfdfd;
         border-radius: 8px;
-        padding: 20px;
+        padding: 5px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         border-left: 4px solid #3498db;
     }
@@ -315,7 +315,7 @@
     .portfolio-social-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px;
     }
 
     .portfolio-social-tag {
@@ -510,6 +510,28 @@
         </div>
 
         <div class="portfolio-section">
+            <h2>{{ t.home.social_activities }}</h2>
+            <div class="portfolio-social-areas">
+                <div class="portfolio-social-category">
+                    <h3>{{ t.home.roles }}</h3>
+                    <div class="portfolio-social-tags">
+                        {% for role in t.home.social_activities_data.roles %}
+                        <span class="portfolio-social-tag">{{ role }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="portfolio-social-category">
+                    <h3>{{ t.home.clubs }}</h3>
+                    <div class="portfolio-social-tags"> 
+                        {% for club in t.home.social_activities_data.clubs %}
+                        <span class="portfolio-social-tag">{{ club }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-section">
             <h2>{{ t.home.technical_skills }}</h2>
             <div class="portfolio-research-areas">
                 <div class="portfolio-research-category">
@@ -533,27 +555,6 @@
                     <div class="portfolio-research-tags">
                         {% for skill in t.home.skills.specialized %}
                         <span class="portfolio-research-tag">{{ skill }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-section">
-            <h2>{{ t.home.social_activities }}</h2>
-            <div class="portfolio-social-areas">
-                <div class="portfolio-social-category">
-                    <h3>{{ t.home.roles }}</h3>
-                    <div class="portfolio-social-tags">
-                        {% for role in t.home.social_activities_data.roles %}
-                        <span class="portfolio-social-tag">{{ role }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="portfolio-social-category">
-                    <h3>{{ t.home.clubs }}</h3>
-                    <div class="portfolio-social-tags"> 
-                        {% for club in t.home.social_activities_data.clubs %}
-                        <span class="portfolio-social-tag">{{ club }}</span>
                         {% endfor %}
                     </div>
                 </div>
