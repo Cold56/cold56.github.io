@@ -1,7 +1,7 @@
 en:
   site:
-    title: "Hourun Zheng - Personal Portfolio"
-    description: "Personal portfolio of Hourun Zheng showcasing academic achievements and research projects in Robotic Engineering at Shenzhen University."
+    title: "Hourun Zheng - Personal Homepage"
+    description: "Personal homepage of Hourun Zheng showcasing academic achievements and research projects in Robotic Engineering at Shenzhen University."
     author: "Hourun Zheng"
   nav:
     blog: "Blog"
@@ -14,7 +14,7 @@ en:
     contact_info: "Contact Information"
     research_interests: "Research Interests"
     about_me: "About Me"
-    about_me_content: "I am an undergraduate student majoring in Robotic Engineering at Shenzhen University. My research interests focus on machine learning, robot control, and image processing technologies. I am passionate about developing innovative solutions that bridge the gap between theoretical knowledge and practical applications in robotics and artificial intelligence."
+    about_me_content: "I am an undergraduate in Robotic Engineering at Shenzhen University. My research interests include machine learning, robot control, and image processing. I am passionate about developing innovative solutions that bridge the gap between theory and practice in robotics and artificial intelligence. Starting next year, I will be pursuing a Master's degree in Control Engineering at Xiamen University (XMU), under the supervision of Prof. Lan Weiyao and <a href='https://xiaoyu.xmu.edu.cn/' target='_blank'>Prof. Yu Xiao</a>."
     education: "Education"
     competition_honors: "Honors & Awards (Scrollable)"
     technical_skills: "Technical Skills"
@@ -51,8 +51,8 @@ en:
 
 zh:
   site:
-    title: "郑厚润 - 个人作品集"
-    description: "郑厚润的个人作品集，展示在深圳大学机器人工程专业的学术成就和研究项目。"
+    title: "郑厚润 - 个人主页"
+    description: "郑厚润的个人主页，展示在深圳大学机器人工程专业的学术成就和研究项目。"
     author: "郑厚润"
   nav:
     blog: "博客"
@@ -65,7 +65,7 @@ zh:
     contact_info: "联系方式"
     research_interests: "研究兴趣"
     about_me: "关于我"
-    about_me_content: "我是深圳大学机器人工程专业的本科生。我的研究兴趣主要集中在机器学习、机器人控制和图像处理技术方面。我热衷于开发创新解决方案，弥合理论知识与机器人和人工智能实际应用之间的差距。"
+    about_me_content: "我目前就读于深圳大学机器人工程专业。研究兴趣包括机器学习、机器人控制及图像处理。我热衷于将理论知识与实践相结合，为机器人与人工智能领域开发创新的解决方案。将于明年进入厦门大学攻读控制工程硕士学位，师从兰维瑶教授和<a href='https://xiaoyu.xmu.edu.cn/' target='_blank'>喻骁教授</a>。"
     education: "教育背景"
     competition_honors: "荣誉与奖项（可滑动）"
     technical_skills: "技术技能"
