@@ -46,7 +46,7 @@ en:
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
       specialized: ["Machine Learning", "Computer Vision", "Robot Control", "Embedded Systems"]
     social_activities_data:
-      role: ["Publicity Commissioner of Class 1, Robotics Engineering of SZU"]
+      roles: ["Publicity Commissioner of Class 1, Robotics Engineering of SZU"]
       clubs: ["Huawei Intelligent Base (Hardware Department)", "AutoLeaders Club" ,"ROS Club"]
 
 zh:
@@ -97,5 +97,5 @@ zh:
       frameworks: ["PyTorch", "OpenCV", "ROS", "Git"]
       specialized: ["机器学习", "计算机视觉", "机器人控制", "嵌入式系统"]
     social_activities_data:
-      role: ["深圳大学机器人工程一班班级宣传委员"]
+      roles: ["深圳大学机器人工程一班班级宣传委员"]
       clubs: ["华为智能基座（硬件部）", "AL俱乐部" ,"ROS俱乐部"]

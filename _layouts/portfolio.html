@@ -544,7 +544,7 @@
                 <div class="portfolio-social-category">
                     <h3>{{ t.home.roles }}</h3>
                     <div class="portfolio-social-tags">
-                        {% for role in t.home.social_activities_data.role %}
+                        {% for role in t.home.social_activities_data.roles %}
                         <span class="portfolio-social-tag">{{ role }}</span>
                         {% endfor %}
                     </div>
@@ -655,11 +655,11 @@
             
             // Update social activities section
             const socialAcitivitiesCategories = document.querySelectorAll('.portfolio-social-category h3');
-            socialAcitivitiesCategories[0].textContent = t.role;
+            socialAcitivitiesCategories[0].textContent = t.roles;
             socialAcitivitiesCategories[1].textContent = t.clubs;
 
             const socialActivitiesContainer = document.querySelectorAll('.portfolio-social-tags');
-            socialActivitiesContainer[0].innerHTML = t.social_activities_data.role.map(role => `<span class="portfolio-social-tag">${role}</span>`).join('');
+            socialActivitiesContainer[0].innerHTML = t.social_activities_data.roles.map(role => `<span class="portfolio-social-tag">${role}</span>`).join('');
             socialActivitiesContainer[1].innerHTML = t.social_activities_data.clubs.map(club => `<span class="portfolio-social-tag">${club}</span>`).join('');
 
             // Update honors section
